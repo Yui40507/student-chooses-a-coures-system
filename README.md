@@ -19,4 +19,4 @@
 ### 資工4B 許廷聿
  
 # PPT連結 [
-https://docs.google.com/presentation/d/1iuD2FzPhDpHWSFZxbZKLYpD-3wPbfunD/edit?usp=drive_link&ouid=115644356195374379076&rtpof=true&sd=true# -](https://1drv.ms/p/c/b84c99153b69f20a/IQDn8PgIU2UuQ6nz9n0SnTtFAaELgz3nDx-GeJEdKbpn0rc?e=51yu7N)
+https://1drv.ms/p/c/b84c99153b69f20a/IQDn8PgIU2UuQ6nz9n0SnTtFAaELgz3nDx-GeJEdKbpn0rc?e=ZnhzIf
