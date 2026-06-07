@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>選課系統專題</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>📚 選課系統專題</h1>
+
+<div class="card">
+<h2>系統功能</h2>
+<ul>
+<li>學生登入 / 老師登入</li>
+<li>課程加退選</li>
+<li>衝堂檢查</li>
+<li>學分計算</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>技術</h2>
+<p>C++ + OOP + GitHub + HTML展示</p>
+</div>
+
+<div class="card">
+<h2>Demo</h2>
+<button onclick="show()">查看畫面</button>
+
+<pre id="demo" style="display:none">
+CS101 C++程式設計
+CS102 資料結構
+加選成功
+</pre>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
