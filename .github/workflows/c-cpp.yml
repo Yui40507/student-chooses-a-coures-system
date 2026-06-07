@@ -1,4 +1,4 @@
-name: C/C++ CI
+name: C++ Build CI
 
 on:
   push:
@@ -8,16 +8,17 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
-    - name: configure
-      run: ./configure
-    - name: make
-      run: make
-    - name: make check
-      run: make check
-    - name: make distcheck
-      run: make distcheck
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Install g++
+      run: sudo apt-get update && sudo apt-get install -y g++
+
+    - name: Compile project
+      run: g++ main.cpp student.cpp course.cpp -o app
+
+    - name: Run program (basic test)
+      run: echo -e "3" | ./app
