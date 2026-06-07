@@ -14,23 +14,29 @@ class Student {
 private:
     string id;
     string name;
-    vector<Course*> enrolledCourses;
     string password;
+
+    vector<Course*> enrolledCourses;
 
 public:
     Student(string id, string name, string password)
-        : id(id), name(name), password(password){}
+        : id(id), name(name), password(password) {}
 
     string getId() const { return id; }
     string getName() const { return name; }
-	void setPassword(const string& newPassword) { password = newPassword; }
+
+    void setPassword(const string& newPassword)
+    {
+        password = newPassword;
+    }
 
     void enroll(Course* course);
     void drop(Course* course);
     void printCourses() const;
+
     bool verifyPassword(const string& input) const;
 
+    int getTotalCredits() const;   // ⭐ 學分總計
 };
 
-#endif // !STUDENT_H
-
+#endif
