@@ -1,42 +1,98 @@
-#ifndef STUDENT_H
-#define STUDENT_H
+#include "student.h"
 
-#include "course.h"
-#include <iostream>
-#include <vector>
-#include <string>
-#include <algorithm>
-using namespace std;
-
-class Course;
-
-class Student {
-private:
-    string id;
-    string name;
-    string password;
-
-    vector<Course*> enrolledCourses;
-
-public:
-    Student(string id, string name, string password)
-        : id(id), name(name), password(password) {}
-
-    string getId() const { return id; }
-    string getName() const { return name; }
-
-    void setPassword(const string& newPassword)
+void Student::enroll(Course* course)
+{
+    // ⭐ 1. 重複選課
+    for (auto c : enrolledCourses)
     {
-        password = newPassword;
+        if (c == course)
+        {
+            cout << "你已經選過這門課了。" << endl;
+            return;
+        }
     }
 
-    void enroll(Course* course);
-    void drop(Course* course);
-    void printCourses() const;
+    // ⭐ 2. 額滿檢查
+    if (course->isFull())
+    {
+        cout << "課程已滿，無法加選。" << endl;
+        return;
+    }
 
-    bool verifyPassword(const string& input) const;
+    // ⭐ 3. 衝堂檢查（核心）
+    for (auto c : enrolledCourses)
+    {
+        if (c->getDay() == course->getDay())
+        {
+            if (!(course->getEndPeriod() < c->getStartPeriod() ||
+                  course->getStartPeriod() > c->getEndPeriod()))
+            {
+                cout << "課程時間衝堂，無法選課！" << endl;
+                return;
+            }
+        }
+    }
 
-    int getTotalCredits() const;   // ⭐ 學分總計
-};
+    enrolledCourses.push_back(course);
+    course->addStudent(this);
 
-#endif
+    cout << "加選成功！" << endl;
+}
+
+void Student::drop(Course* course)
+{
+    auto it = find(enrolledCourses.begin(),
+                   enrolledCourses.end(),
+                   course);
+
+    if (it != enrolledCourses.end())
+    {
+        enrolledCourses.erase(it);
+        course->removeStudent(this);
+
+        cout << "成功退選課程。" << endl;
+    }
+    else
+    {
+        cout << "你沒有修這門課。" << endl;
+    }
+}
+
+void Student::printCourses() const
+{
+    cout << "學生 " << name << " 的課表：" << endl;
+
+    if (enrolledCourses.empty())
+    {
+        cout << "（尚未選任何課程）" << endl;
+        return;
+    }
+
+    for (auto c : enrolledCourses)
+    {
+        cout << " - " << c->getCode()
+             << ": " << c->getTitle()
+             << "（" << c->getCredits() << "學分）"
+             << endl;
+    }
+
+    cout << "總學分：" << getTotalCredits() << endl;
+}
+
+bool Student::verifyPassword(const string& input) const
+{
+    return input == password;
+}
+
+// ⭐ 學分計算
+int Student::getTotalCredits() const
+{
+    int total = 0;
+
+    for (auto c : enrolledCourses)
+    {
+        total += c->getCredits();
+    }
+
+    return total;
+}
