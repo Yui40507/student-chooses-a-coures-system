@@ -16,7 +16,7 @@
 # 分工資訊 
 ### 資工2A 武儀慧(組長): class建構函式 main.cpp PPT UML
 ### 資工3B 湯姵均
-### 資工4B 許廷聿
+### 資工4B 許廷聿:增加學分計算 衝堂顯示
  
 # PPT連結 [
 https://1drv.ms/p/c/b84c99153b69f20a/IQDn8PgIU2UuQ6nz9n0SnTtFAaELgz3nDx-GeJEdKbpn0rc?e=ZnhzIf
