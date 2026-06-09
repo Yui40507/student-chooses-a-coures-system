@@ -6,7 +6,8 @@
 ### 這個程式是一個學生選課系統，提供使用者選擇身分(老師或學生)， 
 ### 學生可以進行加退選課程，老師和學生都可以看到加選課程的人數、查詢課表和課程的學生名單。 
 # UML 
-![image](https://github.com/user-attachments/assets/b5768358-b0a3-4493-8de9-9f81954ecb86)
+<img width="859" height="811" alt="image" src="https://github.com/user-attachments/assets/d2a27d85-3b85-4faa-a5b3-273a98b8e619" />
+
 # 程式畫面截圖 
 ### 老師登入系統 ![image](https://github.com/user-attachments/assets/ec007f5f-1966-4b1c-a0ab-00fb693196e5)
 ### 學生加選 ![image](https://github.com/user-attachments/assets/1e219d5a-7159-4fad-99b1-4e3336ba1aa0)
