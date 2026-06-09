@@ -8,7 +8,8 @@
 # UML 
 <img width="856" height="810" alt="image" src="https://github.com/user-attachments/assets/b28c1296-fc40-40be-ae78-349be2422e80" />
 # 程式畫面截圖 
-### 老師登入系統 ![image](https://github.com/user-attachments/assets/ec007f5f-1966-4b1c-a0ab-00fb693196e5)
+### 老師登入系統<img width="2400" height="1350" alt="image" src="https://github.com/user-attachments/assets/fe803f1e-11b5-49ae-b429-eae45b72785a" />
+
 ### 學生加選 ![image](https://github.com/user-attachments/assets/1e219d5a-7159-4fad-99b1-4e3336ba1aa0)
 ### 加選後學生名單![image](https://github.com/user-attachments/assets/a469c709-f303-4967-93c4-83c04226251e)
 ### 學生退選 ![image](https://github.com/user-attachments/assets/c9690982-20bf-4200-9d8f-2b43b8112c56)
